@@ -1,0 +1,82 @@
+# Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+*.csproj
+*.sln
+*.slnx
+*.pidb
+*.userprefs
+.DS_Store
+
+# Downloaded by tools/fetch_dependencies.sh
+/.downloads/
+/Assets/Plugins/SherpaOnnx/
+/Assets/Plugins/SherpaOnnx.meta
+/Assets/StreamingAssets/Models/
+/Assets/StreamingAssets/Models.meta
+/Assets/Week1/Models/*.onnx
+/Assets/Week1/Models/*.onnx.meta
+/Assets/Week1/Models/*.csv
+/Assets/Week1/Models/*.csv.meta
+
+# Results pulled from the headset
+/results/
+/Assets/Captions/Fonts/*.ttf*
+/Assets/Week1/Models/*.tflite
+/Assets/Week1/Models/*.tflite.meta
+# The active speaker models are exported here (tools/export_lr_asd.py, tools/export_light_asd.py), not downloaded — keep them
+!/Assets/Week1/Models/lr_asd_encoder.onnx
+!/Assets/Week1/Models/lr_asd_encoder.onnx.meta
+!/Assets/Week1/Models/lr_asd_backend.onnx
+!/Assets/Week1/Models/lr_asd_backend.onnx.meta
+!/Assets/Week1/Models/light_asd.onnx
+!/Assets/Week1/Models/light_asd.onnx.meta
+
+# Editor leftovers
+mono_crash.*
+/.utmp/
+/.vscode/
+/Assets/_Recovery/
+/Assets/_Recovery.meta
+
+# Speech-recognition evaluation (tools/asr_eval)
+/tools/.venv/
+/tools/asr_eval/data/
+/tools/asr_eval/quest/
+/tools/harness_data/
+# Signing: Lina (Movement SDK sample, unused for now) and the sign-data tooling's downloads, venv and logs
+/Assets/Captions/Signing/Lina/
+/Assets/Captions/Signing/Lina.meta
+/tools/signs/.venv/
+/tools/signs/popsign/
+/tools/signs/how2sign/
+/tools/signs/*.log
+/tools/signs/wlasl/
+# Pose models (WiLoR's code and weights, MANO): downloaded, separately licensed
+/tools/signs/models/
+/tools/signs/signavatars/
+/tools/signs/aslcitizen/
+/tools/signs/asllex/
+
+# Built by tools/llm/build_llm.sh (llama.cpp + tools/llm/sophie_llm.cpp)
+/Assets/Plugins/SophieLlm/**/*.so
+/Assets/Plugins/SophieLlm/**/*.dylib
+
+# Grant/competition drafts: private, keep out of the public repo
+docs/submissions/
+
+# Free summary server address and token (tools/summary-server): kept out of git
+Assets/Captions/Resources/summary_server.txt
+Assets/Captions/Resources/summary_server.txt.meta
+tools/summary-server/.wrangler/
+
+/tools/signs/interhand/
+/tools/signs/__pycache__/
+/tools/signs/sam3d_cache/
+/tools/signs/3dlex/
